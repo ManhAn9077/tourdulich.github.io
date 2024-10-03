@@ -1,0 +1,158 @@
+ #start{
+    background-color: orange;
+    height: 100px;
+    width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header, nav{
+    /* canh giữa cách lề mỗi bên 10% */
+    margin: 5px 10px;
+}
+nav{
+    background: #484848; /*tô màu cho menu cha*/
+    border-radius: 5px; /* bo góc */
+}
+nav ul{
+    display: flex;
+}
+nav> ul li{
+    list-style: none; /* bỏ dấu chấm mặc định của li */
+    /* kẻ đường bên trái và bên phải của li */
+    border-right: 1px solid #ccc;
+    border-left:1px solid #333;
+}
+nav> ul li a{
+    display: block;
+    padding: 0 25px;
+    line-height: 50px;
+    color: #f1f2f3;
+    text-decoration: none;
+}
+nav ul li:first-child {
+    border-left: none; /* bỏ đường kè trái của phần tử đầu tiên */
+}
+nav> ul li:first-child a{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+/* Khi hover đến li, tô màu cho thẻ a */
+nav ul li:hover>a{
+    background: red;
+    opacity: .7;
+    color: yellow;
+}
+/*menu con*/
+/*Ẩn các menu con cấp 1,2,3*/
+nav li ul{
+    display: none;
+    min-width: 350px;
+    position: absolute;
+}
+nav li>ul li{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: #999;
+    text-align: left;
+}
+nav li>ul li:first-child a{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+nav li>ul li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+nav li>ul li:last-child a{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*khi hover thì hiện menu con*/
+nav  li:hover > ul{
+    display:  block;
+}
+/*Hiển thị menu con cấp 2,3,4 bên cạnh phải*/
+nav > ul li > ul li >ul{
+    margin-left: 352px;
+    margin-top: -50px;
+}
+
+
+
+
+
+
+header p{
+    position:absolute;
+    top: 45px;
+    left: 40%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: white;
+}
+#bang ul{
+    list-style: none;
+
+}
+#bang ul li {
+    float:left;
+    padding-left: 35px;
+    padding-right:75px;
+    margin-bottom: 2px;
+    margin-top: 7px;
+    color:rgb(0, 0, 0);
+}
+#bang ul li a{ 
+    padding:25px 15px 15px 25px;
+
+}
+#sign h3 a{
+    color:rgb(255, 255, 255);
+    position:absolute;
+        right: 625px;
+        top: 600px;
+    display:block;
+    background-color: black;
+    padding:35px 85px 35px 85px;
+    opacity: 0.9;
+    border-radius: 55px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 13px 10px 10px black;
+}
+#search{
+    line-height: 5px;
+    float: right;
+    padding-top:15px;
+    padding-right:25px;
+}
+#search input{
+    width: 295px;
+    height: 25px;
+}
+
+
+
+
+
+footer{
+    padding-top: 50px;
+    width:980px;
+    margin: 0 auto;
+}
+footer h3{
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    paddung-top:15px;
+}
+footer p{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top:15px;
+}
+footer h2{
+    padding-top:15px;
+}
